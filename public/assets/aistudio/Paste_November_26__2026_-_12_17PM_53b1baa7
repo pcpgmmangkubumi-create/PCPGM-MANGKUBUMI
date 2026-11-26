@@ -1,0 +1,1727 @@
+# MASTER PROMPT UTAMA
+# AI SMART TEACHER – PLATFORM OTOMATISASI PERANGKAT PEMBELAJARAN DAN ASESMEN DIGITAL
+
+## 1. PERAN DAN IDENTITAS PROYEK
+
+Bertindaklah sebagai tim profesional yang terdiri dari:
+- Senior Full-Stack Developer.
+- UI/UX Designer.
+- AI Engineer.
+- Database Architect.
+- Education Technology Specialist.
+- Curriculum Specialist.
+- Assessment Specialist.
+- Instructional Designer.
+- Quality Assurance Engineer.
+
+Bangun sebuah aplikasi web modern bernama **AI SMART TEACHER**, yaitu platform kecerdasan buatan untuk membantu guru menyusun, mengelola, mengembangkan, melaksanakan, dan mengevaluasi seluruh kegiatan pembelajaran secara otomatis dalam satu aplikasi terintegrasi.
+
+Aplikasi harus mampu menghasilkan seluruh perangkat pembelajaran untuk satu tahun ajaran berdasarkan mata pelajaran, jenjang, kelas, fase, kurikulum, kalender pendidikan, PROTA, PROSEM, serta sumber buku yang digunakan.
+
+Tujuan utama aplikasi adalah mempermudah guru. Guru tidak perlu mengetik seluruh elemen kurikulum, materi pokok, tujuan pembelajaran, dan perangkat pembelajaran satu per satu. AI harus mengisi dan menyusunnya secara otomatis berdasarkan data pendidikan dan referensi buku yang tersedia.
+
+Aplikasi harus memiliki tampilan profesional, modern, elegan, responsif, mudah digunakan, dan mengutamakan pengalaman penggunaan melalui HP maupun komputer.
+
+---
+
+# 2. TUJUAN UTAMA APLIKASI
+
+Aplikasi harus memiliki kemampuan berikut:
+
+1. Membuat perangkat pembelajaran secara otomatis untuk satu tahun ajaran.
+2. Mengisi elemen kurikulum dan materi pokok secara otomatis.
+3. Menghasilkan CP, TP, ATP, PROTA, dan PROSEM.
+4. Menghasilkan modul ajar atau RPP secara otomatis.
+5. Membuat bahan ajar lengkap untuk setiap pertemuan.
+6. Menghasilkan LKPD untuk setiap materi atau pertemuan.
+7. Membuat media pembelajaran PowerPoint yang menarik dan edukatif.
+8. Membuat ilustrasi, gambar, diagram, dan animasi pembelajaran.
+9. Membuat bank soal yang dapat dikembangkan menjadi asesmen dan ujian.
+10. Membuat kuis online yang dapat dikerjakan siswa melalui HP.
+11. Mengelola kelas, peserta didik, kehadiran, dan hasil belajar.
+12. Mengoreksi soal otomatis sesuai jenis soal.
+13. Menghasilkan analisis hasil asesmen.
+14. Menghasilkan dokumen profesional siap cetak dan diunduh.
+15. Menyediakan checklist pelaksanaan pembelajaran pada PROSEM setiap bulan.
+16. Mengintegrasikan semua dokumen agar saling terhubung dan tidak perlu dibuat berulang kali.
+
+---
+
+# 3. JENJANG, KURIKULUM, DAN IDENTITAS SEKOLAH
+
+## 3.1 Pilihan Jenjang Pendidikan
+
+Sediakan pilihan jenjang:
+
+- PAUD/TK/RA.
+- SD/MI.
+- SMP/MTs.
+- SMA/MA.
+- SMK/MAK.
+- SLB.
+
+Pilihan kelas harus menyesuaikan jenjang yang dipilih.
+
+## 3.2 Pilihan Kurikulum
+
+Sediakan pilihan kurikulum yang dapat dikelola melalui pengaturan aplikasi:
+
+- Kurikulum Merdeka.
+- Kurikulum Merdeka dengan revisi CP terbaru.
+- Kurikulum 2013 (K-13).
+- Kurikulum Satuan Pendidikan (KSP).
+- Kurikulum lainnya yang dapat ditambahkan administrator.
+
+Sistem harus mampu menyesuaikan struktur dokumen dengan kurikulum yang dipilih.
+
+Jangan mencampur format, istilah, atau komponen dari kurikulum yang berbeda tanpa alasan yang sesuai.
+
+## 3.3 Identitas Sekolah
+
+Sediakan pengaturan identitas sekolah:
+
+- Nama sekolah.
+- NPSN.
+- Jenjang pendidikan.
+- Status sekolah.
+- Alamat.
+- Desa/kelurahan.
+- Kecamatan.
+- Kabupaten/kota.
+- Provinsi.
+- Nama kepala sekolah.
+- NIP kepala sekolah.
+- Nama guru.
+- NIP guru.
+- Mata pelajaran.
+- Tahun ajaran.
+- Semester.
+- Logo sekolah.
+- Logo instansi terkait jika diperlukan.
+
+Identitas sekolah harus otomatis ditampilkan pada dokumen yang dihasilkan.
+
+## 3.4 Identitas Guru
+
+Setiap guru dapat mengatur profil masing-masing:
+
+- Nama lengkap.
+- NIP/NUPTK jika ada.
+- Jabatan.
+- Mata pelajaran.
+- Kelas yang diampu.
+- Fase.
+- Jenjang.
+- Sekolah.
+- Tanda tangan digital atau gambar tanda tangan yang diunggah sendiri.
+
+---
+
+# 4. FITUR AI AUTO CURRICULUM
+
+Ini merupakan fitur inti aplikasi.
+
+Guru cukup memilih atau mengisi informasi dasar:
+- Jenjang.
+- Kurikulum.
+- Kelas.
+- Fase.
+- Mata pelajaran.
+- Tahun ajaran.
+
+Setelah itu, AI harus menyusun komponen pembelajaran secara otomatis.
+
+## 4.1 Pengisian Otomatis Elemen Kurikulum
+
+AI harus dapat mengidentifikasi dan mengisi:
+
+- Elemen pembelajaran.
+- Capaian Pembelajaran (CP).
+- Kompetensi.
+- Lingkup materi.
+- Materi pokok.
+- Submateri.
+- Tujuan Pembelajaran (TP).
+- Alur Tujuan Pembelajaran (ATP).
+- Indikator ketercapaian.
+- Dimensi atau kompetensi yang relevan.
+- Profil lulusan atau profil pelajar sesuai ketentuan kurikulum yang berlaku.
+- Alokasi waktu.
+- Urutan pembelajaran.
+
+Semua data harus disesuaikan dengan jenjang, kelas, fase, kurikulum, dan mata pelajaran.
+
+## 4.2 AI Auto Mapping Materi
+
+AI harus mampu membuat pemetaan materi dari sumber buku.
+
+Contohnya:
+
+Guru memilih:
+- Jenjang: SMP.
+- Kelas: VII.
+- Fase: D.
+- Kurikulum: Kurikulum Merdeka.
+- Mata Pelajaran: Bahasa Indonesia.
+
+AI kemudian menyusun:
+- Elemen pembelajaran.
+- CP.
+- Daftar materi pokok.
+- Submateri.
+- Tujuan pembelajaran.
+- Urutan materi.
+- Perkiraan jumlah pertemuan.
+- Alokasi JP.
+- Keterkaitan materi dengan buku referensi.
+
+Guru dapat mengedit hasilnya sebelum disimpan.
+
+**PENTING:** AI tidak boleh mengarang CP resmi, kutipan buku, nomor halaman, atau sumber referensi. Jika sumber resmi tidak tersedia, berikan keterangan bahwa data perlu diverifikasi dan tampilkan hasil sebagai draf rekomendasi AI.
+
+---
+
+# 5. DATABASE BUKU DAN SUMBER REFERENSI
+
+Buat modul khusus untuk mengelola buku referensi.
+
+## 5.1 Upload Buku
+
+Guru dapat mengunggah:
+
+- PDF.
+- DOC.
+- DOCX.
+- PPTX.
+- Gambar halaman buku.
+- Dokumen hasil pemindaian.
+
+Sistem harus mendukung:
+- Ekstraksi teks.
+- OCR untuk dokumen hasil pemindaian.
+- Pengenalan judul bab.
+- Pengenalan subbab.
+- Pengenalan materi.
+- Pengenalan latihan soal.
+- Identifikasi gambar dan tabel.
+- Pengelompokan berdasarkan kelas dan mata pelajaran.
+
+## 5.2 Informasi Buku
+
+Setiap buku memiliki informasi:
+
+- Judul buku.
+- Penulis.
+- Penerbit.
+- Tahun terbit.
+- Kurikulum.
+- Jenjang.
+- Kelas.
+- Mata pelajaran.
+- ISBN jika tersedia.
+- Jumlah halaman.
+- Status buku.
+- File buku.
+
+## 5.3 Pemilihan Referensi
+
+Guru dapat memilih:
+- Buku utama.
+- Buku pendamping.
+- Modul tambahan.
+- Sumber resmi pemerintah.
+- Referensi yang diunggah sendiri.
+
+AI harus mengutamakan sumber utama yang dipilih guru.
+
+## 5.4 Keterlacakan Sumber
+
+Setiap materi yang dibuat AI harus dapat menunjukkan sumbernya.
+
+Jika memungkinkan, tampilkan:
+- Nama buku.
+- Bab.
+- Subbab.
+- Halaman.
+- Bagian materi yang digunakan.
+
+Jika halaman tidak dapat diidentifikasi, jangan membuat nomor halaman palsu.
+
+---
+
+# 6. GENERATOR PERANGKAT PEMBELAJARAN OTOMATIS
+
+Buat satu menu utama bernama **GENERATE PERANGKAT PEMBELAJARAN**.
+
+Guru dapat membuat seluruh dokumen dalam satu kali proses.
+
+## 6.1 Dokumen yang Harus Dihasilkan
+
+1. Identitas mata pelajaran.
+2. Analisis kalender pendidikan.
+3. Analisis minggu efektif.
+4. Analisis alokasi waktu.
+5. Capaian Pembelajaran (CP).
+6. Tujuan Pembelajaran (TP).
+7. Alur Tujuan Pembelajaran (ATP).
+8. Program Tahunan (PROTA).
+9. Program Semester (PROSEM).
+10. Modul Ajar/RPP.
+11. Bahan Ajar.
+12. LKPD.
+13. Media Pembelajaran.
+14. Presentasi PowerPoint.
+15. Kisi-kisi soal.
+16. Bank Soal.
+17. Instrumen Asesmen.
+18. Rubrik Penilaian.
+19. Lembar Penilaian.
+20. Program remedial.
+21. Program pengayaan.
+22. Analisis hasil pembelajaran.
+23. Refleksi guru.
+24. Jurnal mengajar.
+25. Daftar referensi.
+
+Seluruh dokumen harus saling terhubung.
+
+Perubahan pada TP atau materi harus memberikan pilihan untuk memperbarui dokumen turunannya tanpa menghapus hasil yang telah dibuat guru.
+
+## 6.2 Generator Sekaligus
+
+Sediakan tombol:
+
+**GENERATE SEMUA PERANGKAT SATU TAHUN**
+
+Ketika tombol diklik, AI menjalankan proses secara bertahap:
+
+1. Membaca identitas sekolah dan pengaturan guru.
+2. Membaca kurikulum.
+3. Membaca CP dan referensi yang tersedia.
+4. Mengidentifikasi materi dari buku.
+5. Menyusun TP.
+6. Menyusun ATP.
+7. Menganalisis kalender pendidikan.
+8. Menyusun PROTA.
+9. Menyusun PROSEM.
+10. Membagi materi berdasarkan pertemuan.
+11. Menghasilkan modul ajar.
+12. Menghasilkan bahan ajar.
+13. Menghasilkan LKPD.
+14. Menghasilkan PowerPoint.
+15. Menghasilkan kisi-kisi dan bank soal.
+16. Menyiapkan kuis online.
+17. Menyimpan seluruh hasil ke dalam folder tahun ajaran.
+
+Tampilkan progres proses pembuatan dan status masing-masing dokumen.
+
+Guru dapat membuat ulang hanya dokumen tertentu tanpa harus mengulang semuanya.
+
+---
+
+# 7. PROGRAM TAHUNAN (PROTA)
+
+Buat generator PROTA otomatis berdasarkan:
+
+- Tahun ajaran.
+- Kalender pendidikan.
+- Jumlah minggu efektif.
+- Jumlah minggu tidak efektif.
+- Hari libur nasional.
+- Libur semester.
+- Kegiatan sekolah.
+- Mata pelajaran.
+- Jumlah JP per minggu.
+- Materi pokok.
+- Tujuan pembelajaran.
+
+PROTA harus memuat:
+
+- Identitas sekolah.
+- Mata pelajaran.
+- Kelas/fase.
+- Tahun ajaran.
+- Semester.
+- Elemen.
+- Materi pokok.
+- Tujuan pembelajaran.
+- Alokasi waktu.
+- Distribusi waktu.
+- Jumlah JP.
+
+Sediakan fitur:
+- Generate otomatis.
+- Edit manual.
+- Atur ulang alokasi waktu.
+- Tambah atau hapus materi.
+- Simpan revisi.
+- Cetak.
+- Ekspor PDF.
+- Ekspor DOCX.
+- Ekspor XLSX.
+
+---
+
+# 8. PROGRAM SEMESTER (PROSEM)
+
+Buat PROSEM yang terhubung langsung dengan PROTA dan ATP.
+
+## 8.1 Penyusunan Otomatis
+
+AI harus membagi materi ke dalam:
+- Semester 1.
+- Semester 2.
+- Bulan.
+- Minggu.
+- Pertemuan.
+- Tujuan pembelajaran.
+- Materi pokok.
+- Alokasi JP.
+
+Pembagian harus mempertimbangkan kalender pendidikan dan minggu efektif.
+
+## 8.2 Tampilan PROSEM
+
+Buat tabel PROSEM profesional yang memuat:
+
+- Nomor.
+- Bulan.
+- Minggu.
+- Materi pokok.
+- Submateri.
+- Tujuan pembelajaran.
+- Alokasi JP.
+- Keterangan.
+- Checklist pelaksanaan.
+
+## 8.3 Checklist Bulanan
+
+Ini merupakan fitur wajib.
+
+Setiap bulan harus memiliki kotak checklist yang dapat dicentang guru.
+
+Contoh:
+
+| Bulan | Materi | Status |
+| Januari | Materi 1 | ☐ |
+| Januari | Materi 2 | ☐ |
+| Februari | Materi 3 | ☐ |
+| Maret | Materi 4 | ☐ |
+
+Ketika guru menyelesaikan materi, guru dapat mencentang status.
+
+Sediakan status:
+- Belum dilaksanakan.
+- Sedang berlangsung.
+- Selesai.
+- Ditunda.
+- Perlu penyesuaian.
+
+Sistem harus menyimpan:
+- Tanggal pelaksanaan.
+- Catatan guru.
+- Materi yang selesai.
+- Materi yang belum selesai.
+- Persentase keterlaksanaan.
+
+**PENTING:** Checklist PROSEM harus membedakan antara jadwal yang direncanakan dan pembelajaran yang benar-benar telah dilaksanakan.
+
+## 8.4 Rekap Pelaksanaan
+
+Tampilkan:
+- Persentase keterlaksanaan per bulan.
+- Persentase per semester.
+- Jumlah materi selesai.
+- Jumlah materi belum selesai.
+- Materi yang tertunda.
+- Catatan evaluasi.
+
+---
+
+# 9. GENERATOR BAHAN AJAR PER PERTEMUAN
+
+Buat fitur khusus untuk membuat bahan ajar berdasarkan jadwal PROSEM.
+
+**Setiap pertemuan harus memiliki bahan ajar sendiri.**
+
+Jangan hanya menghasilkan satu bahan ajar umum untuk satu semester.
+
+## 9.1 Pembagian Materi
+
+AI harus membaca:
+- PROTA.
+- PROSEM.
+- ATP.
+- TP.
+- Alokasi JP.
+- Buku referensi.
+- Kalender pembelajaran.
+
+Kemudian membagi materi secara otomatis menjadi beberapa pertemuan.
+
+Contoh:
+
+Semester 1:
+- Pertemuan 1: Pengenalan materi.
+- Pertemuan 2: Konsep dasar.
+- Pertemuan 3: Pembahasan lanjutan.
+- Pertemuan 4: Contoh penerapan.
+- Pertemuan 5: Latihan dan diskusi.
+- Pertemuan 6: Asesmen.
+
+Pembagian tersebut harus menyesuaikan isi buku dan kebutuhan pembelajaran, bukan menggunakan pembagian yang dipaksakan.
+
+## 9.2 Struktur Bahan Ajar
+
+Setiap bahan ajar wajib memuat:
+
+1. Identitas sekolah.
+2. Mata pelajaran.
+3. Kelas/fase.
+4. Semester.
+5. Pertemuan keberapa.
+6. Alokasi waktu.
+7. Materi pokok.
+8. Submateri.
+9. Tujuan pembelajaran.
+10. Pemahaman bermakna.
+11. Pertanyaan pemantik.
+12. Penjelasan materi.
+13. Konsep penting.
+14. Contoh penerapan.
+15. Ilustrasi atau gambar.
+16. Aktivitas pembelajaran.
+17. Rangkuman.
+18. Latihan soal.
+19. Refleksi siswa.
+20. Referensi buku.
+
+## 9.3 Pengaturan Generator
+
+Sediakan pilihan:
+- Generate satu pertemuan.
+- Generate satu bab.
+- Generate satu bulan.
+- Generate satu semester.
+- Generate satu tahun ajaran.
+
+Sediakan status:
+- Belum dibuat.
+- Sedang dibuat.
+- Selesai.
+- Perlu revisi.
+
+---
+
+# 10. GENERATOR MODUL AJAR / RPP
+
+Setiap modul ajar harus disusun sesuai kurikulum yang dipilih.
+
+Komponen minimal:
+
+### A. Informasi Umum
+- Identitas modul.
+- Kompetensi awal.
+- Karakteristik peserta didik.
+- Sarana dan prasarana.
+- Target peserta didik.
+- Model pembelajaran.
+- Metode pembelajaran.
+
+### B. Komponen Inti
+- Capaian pembelajaran.
+- Tujuan pembelajaran.
+- Pemahaman bermakna.
+- Pertanyaan pemantik.
+- Kegiatan pembelajaran.
+- Asesmen.
+- Pengayaan.
+- Remedial.
+- Refleksi guru.
+- Refleksi peserta didik.
+
+### C. Langkah Pembelajaran
+
+Buat pembagian:
+1. Kegiatan pendahuluan.
+2. Kegiatan inti.
+3. Kegiatan penutup.
+
+Cantumkan estimasi waktu setiap kegiatan.
+
+Sesuaikan aktivitas dengan model pembelajaran yang dipilih, karakteristik materi, dan kondisi peserta didik.
+
+### D. Diferensiasi Pembelajaran
+
+Sediakan penyesuaian:
+- Konten.
+- Proses.
+- Produk.
+- Kesiapan belajar.
+- Minat peserta didik.
+
+### E. Asesmen
+
+Sediakan:
+- Asesmen diagnostik.
+- Asesmen formatif.
+- Asesmen sumatif.
+
+Modul dapat diedit sebelum dicetak atau diunduh.
+
+---
+
+# 11. GENERATOR LKPD
+
+Buat LKPD otomatis berdasarkan materi dan tujuan pembelajaran setiap pertemuan.
+
+Struktur LKPD:
+
+1. Identitas.
+2. Judul kegiatan.
+3. Tujuan.
+4. Petunjuk pengerjaan.
+5. Alat dan bahan jika diperlukan.
+6. Materi singkat.
+7. Langkah kegiatan.
+8. Aktivitas individu atau kelompok.
+9. Pertanyaan pemahaman.
+10. Tugas praktik.
+11. Tabel pengamatan jika diperlukan.
+12. Kesimpulan.
+13. Refleksi.
+14. Penilaian.
+
+Sediakan pilihan:
+- LKPD individu.
+- LKPD kelompok.
+- LKPD proyek.
+- LKPD praktik.
+- LKPD berbasis literasi.
+- LKPD berbasis numerasi.
+- LKPD HOTS.
+
+---
+
+# 12. GENERATOR POWERPOINT CERDAS
+
+Buat fitur AI PowerPoint Generator.
+
+PowerPoint harus menarik, modern, visual, dan sesuai usia peserta didik.
+
+## 12.1 Pembuatan Otomatis
+
+PowerPoint dibuat berdasarkan:
+- Mata pelajaran.
+- Materi.
+- Tujuan pembelajaran.
+- Bahan ajar per pertemuan.
+- Buku referensi.
+
+Setiap pertemuan dapat memiliki file PowerPoint tersendiri.
+
+## 12.2 Struktur Slide
+
+AI menyusun slide yang sesuai kebutuhan materi, misalnya:
+
+1. Cover.
+2. Judul materi.
+3. Tujuan pembelajaran.
+4. Pertanyaan pemantik.
+5. Pengenalan konsep.
+6. Penjelasan materi.
+7. Gambar atau ilustrasi.
+8. Diagram.
+9. Contoh soal.
+10. Contoh penerapan.
+11. Aktivitas siswa.
+12. Rangkuman.
+13. Kuis.
+14. Refleksi.
+15. Penutup.
+
+Jumlah slide harus dapat diatur dan tidak harus selalu sama.
+
+## 12.3 Desain Visual
+
+Gunakan:
+- Layout modern.
+- Tipografi yang mudah dibaca.
+- Warna yang harmonis.
+- Gambar relevan.
+- Ilustrasi edukatif.
+- Diagram.
+- Infografik.
+- Ikon.
+- Grafik.
+- Tabel.
+
+Hindari slide yang penuh tulisan.
+
+## 12.4 Animasi dan Transisi
+
+Tambahkan animasi untuk membantu menjelaskan konsep.
+
+Contoh:
+- Animasi muncul bertahap.
+- Animasi penekanan.
+- Animasi perpindahan objek.
+- Animasi proses.
+- Transisi antar-slide.
+- Urutan penjelasan konsep.
+
+Gunakan animasi secara proporsional dan tidak berlebihan.
+
+Jika format ekspor tidak mendukung animasi tertentu, sediakan alternatif berupa slide berurutan, GIF, atau video pendek.
+
+## 12.5 Pengaturan PowerPoint
+
+Guru dapat mengatur:
+- Jumlah slide.
+- Tema desain.
+- Warna.
+- Jenis font.
+- Gaya ilustrasi.
+- Tingkat kesulitan bahasa.
+- Penggunaan gambar.
+- Animasi.
+- Catatan presenter.
+
+## 12.6 Hasil Ekspor
+
+Sediakan:
+- PPTX.
+- PDF.
+- Pratinjau slide.
+- Catatan pengajaran.
+
+---
+
+# 13. BANK SOAL DAN GENERATOR ASESMEN
+
+Buat modul bank soal terintegrasi dengan CP, TP, ATP, bahan ajar, dan buku referensi.
+
+## 13.1 Jenis Soal
+
+Sediakan:
+1. Pilihan ganda.
+2. Pilihan ganda kompleks.
+3. Benar atau salah.
+4. Menjodohkan.
+5. Isian singkat.
+6. Jawaban singkat.
+7. Uraian.
+8. Studi kasus.
+9. Soal berbasis gambar.
+10. Soal literasi.
+11. Soal numerasi.
+12. Soal HOTS.
+13. Soal praktik.
+
+## 13.2 Pengaturan Jumlah Soal
+
+Jumlah soal wajib dapat diatur bebas oleh guru.
+
+Contoh:
+- 5 soal.
+- 10 soal.
+- 15 soal.
+- 20 soal.
+- 25 soal.
+- 30 soal.
+- 40 soal.
+- 50 soal.
+- Jumlah khusus sesuai kebutuhan.
+
+Jangan membatasi guru pada pilihan jumlah tertentu.
+
+## 13.3 Kategori Soal
+
+Guru dapat menentukan:
+- Kategori asesmen diagnostik.
+- Kategori asesmen formatif.
+- Kategori asesmen sumatif.
+- Kuis harian.
+- Penilaian tengah semester.
+- Penilaian akhir semester.
+- Ujian akhir.
+- Latihan.
+- Remedial.
+- Pengayaan.
+
+## 13.4 Tingkat Kesulitan
+
+Atur proporsi:
+- Mudah.
+- Sedang.
+- Sulit.
+
+## 13.5 Level Kognitif
+
+Sediakan:
+- C1 Mengingat.
+- C2 Memahami.
+- C3 Menerapkan.
+- C4 Menganalisis.
+- C5 Mengevaluasi.
+- C6 Mencipta.
+
+Sediakan kategori LOTS, MOTS, dan HOTS jika relevan.
+
+Guru dapat menentukan persentase masing-masing kategori.
+
+## 13.6 Pengaturan Sumber Soal
+
+AI harus membuat soal berdasarkan:
+- Tujuan pembelajaran.
+- Materi per pertemuan.
+- Buku referensi.
+- Kisi-kisi.
+- Tingkat kelas.
+- Tingkat kesulitan.
+
+Setiap soal harus memiliki:
+- Pertanyaan.
+- Pilihan jawaban jika diperlukan.
+- Kunci jawaban.
+- Pembahasan.
+- Indikator.
+- Tujuan pembelajaran terkait.
+- Level kognitif.
+- Tingkat kesulitan.
+- Sumber materi jika tersedia.
+
+Jangan membuat kunci jawaban yang tidak sesuai dengan soal.
+
+## 13.7 Kisi-Kisi Soal
+
+Buat kisi-kisi otomatis dengan kolom:
+
+- Nomor.
+- CP/kompetensi.
+- Tujuan pembelajaran.
+- Materi.
+- Indikator soal.
+- Level kognitif.
+- Bentuk soal.
+- Nomor soal.
+- Bobot.
+
+## 13.8 Variasi Paket Ujian
+
+Sediakan fitur:
+- Paket A.
+- Paket B.
+- Paket C.
+- Paket D.
+
+Soal dapat diacak urutannya dan pilihan jawabannya.
+
+Pastikan tingkat kesulitan dan cakupan kompetensi antarpaket tetap seimbang.
+
+## 13.9 Dokumen Ujian
+
+Hasilkan:
+- Cover ujian.
+- Identitas peserta.
+- Petunjuk pengerjaan.
+- Naskah soal.
+- Lembar jawaban.
+- Kunci jawaban terpisah.
+- Pedoman penskoran.
+- Rubrik uraian.
+- Kisi-kisi.
+- Rekap nilai.
+
+Kunci jawaban tidak boleh ditampilkan kepada siswa sebelum ujian selesai.
+
+---
+
+# 14. KUIS ONLINE UNTUK SISWA
+
+Buat fitur kuis digital yang dapat dibuka melalui HP, tablet, maupun komputer.
+
+## 14.1 Sistem Pembuatan Kuis
+
+Guru dapat:
+- Membuat kuis dari bank soal.
+- Membuat kuis otomatis dengan AI.
+- Mengambil soal dari materi pertemuan.
+- Mengambil soal dari satu bab.
+- Mengambil soal dari satu semester.
+- Mengambil soal dari ujian yang sudah dibuat.
+
+## 14.2 Pengaturan Kuis
+
+Sediakan:
+- Judul kuis.
+- Deskripsi.
+- Kelas.
+- Mata pelajaran.
+- Jumlah soal.
+- Durasi.
+- Tanggal mulai.
+- Tanggal selesai.
+- Batas percobaan.
+- Acak soal.
+- Acak pilihan jawaban.
+- Nilai minimum.
+- Tampilan hasil.
+- Mode latihan.
+- Mode ujian.
+
+## 14.3 Akses Siswa
+
+Sediakan dua cara:
+1. Login menggunakan akun siswa.
+2. Mengakses kuis menggunakan kode atau tautan yang dibagikan guru.
+
+Jika menggunakan tautan, guru dapat menentukan apakah siswa harus memasukkan nama dan identitas terlebih dahulu.
+
+## 14.4 Tampilan Siswa
+
+Tampilan harus sederhana:
+- Nama kuis.
+- Identitas siswa.
+- Petunjuk.
+- Nomor soal.
+- Navigasi soal.
+- Penanda soal yang sudah dijawab.
+- Timer.
+- Tombol sebelumnya.
+- Tombol berikutnya.
+- Tombol kirim jawaban.
+
+## 14.5 Koreksi Otomatis
+
+Sistem mengoreksi otomatis:
+- Pilihan ganda.
+- Benar/salah.
+- Pilihan ganda kompleks.
+- Menjodohkan.
+- Isian dengan kunci yang ditentukan.
+
+Untuk soal uraian, AI dapat memberikan penilaian awal berdasarkan rubrik. Guru tetap memiliki hak memeriksa dan mengubah nilai.
+
+## 14.6 Keamanan Kuis
+
+- Satu sesi ujian harus memiliki identitas peserta.
+- Jawaban tersimpan secara berkala.
+- Timer berjalan sesuai pengaturan.
+- Siswa tidak dapat mengakses kunci jawaban sebelum waktunya.
+- Guru dapat melihat aktivitas pengerjaan.
+- Sistem mencatat waktu mulai dan waktu pengumpulan.
+- Sistem menangani koneksi terputus dengan mekanisme penyimpanan jawaban yang aman.
+- Pengacakan tidak boleh menghilangkan atau menggandakan soal.
+
+---
+
+# 15. MANAJEMEN KELAS DAN PESERTA DIDIK
+
+Buat menu pengelolaan kelas.
+
+Fitur:
+- Tambah kelas.
+- Edit kelas.
+- Hapus kelas dengan konfirmasi.
+- Tambah siswa.
+- Impor data siswa dari Excel.
+- Ekspor data siswa.
+- Edit identitas siswa.
+- Pindah kelas.
+- Status aktif/nonaktif.
+- Daftar peserta didik.
+
+Data siswa:
+- Nama lengkap.
+- NIS.
+- NISN jika tersedia.
+- Kelas.
+- Jenis kelamin jika diperlukan.
+- Nomor induk sekolah.
+- Informasi lain sesuai kebutuhan sekolah.
+
+Lindungi data pribadi siswa dan batasi akses hanya kepada pengguna yang berwenang.
+
+---
+
+# 16. PENILAIAN DAN ANALISIS HASIL BELAJAR
+
+Buat pusat penilaian terintegrasi.
+
+Fitur:
+- Nilai kuis.
+- Nilai tugas.
+- Nilai praktik.
+- Nilai proyek.
+- Nilai asesmen formatif.
+- Nilai asesmen sumatif.
+- Nilai ujian.
+- Nilai remedial.
+- Nilai pengayaan.
+
+## 16.1 Perhitungan Nilai
+
+Guru dapat mengatur:
+- Bobot nilai.
+- Skala penilaian.
+- Kriteria ketuntasan.
+- Nilai minimum.
+- Rumus nilai akhir.
+
+Jangan menetapkan bobot atau kriteria secara permanen. Semua harus dapat disesuaikan dengan kebijakan sekolah.
+
+## 16.2 Analisis Otomatis
+
+AI menganalisis:
+- Rata-rata kelas.
+- Nilai tertinggi.
+- Nilai terendah.
+- Jumlah siswa tuntas.
+- Jumlah siswa belum tuntas.
+- Persentase ketuntasan.
+- Materi yang paling sulit.
+- Tujuan pembelajaran yang belum tercapai.
+- Rekomendasi remedial.
+- Rekomendasi pengayaan.
+
+## 16.3 Laporan
+
+Hasil dapat diunduh dalam:
+- PDF.
+- DOCX.
+- XLSX.
+
+---
+
+# 17. REMEDIAL DAN PENGAYAAN
+
+Buat generator remedial dan pengayaan otomatis.
+
+## Remedial
+
+AI mengidentifikasi siswa yang belum mencapai kriteria.
+
+Kemudian membuat:
+- Analisis kesulitan.
+- Materi penguatan.
+- Penjelasan tambahan.
+- Latihan soal.
+- Aktivitas remedial.
+- Asesmen ulang.
+- Rekap hasil remedial.
+
+## Pengayaan
+
+Untuk siswa yang sudah mencapai atau melampaui target, AI membuat:
+- Soal tantangan.
+- Proyek lanjutan.
+- Studi kasus.
+- Aktivitas eksplorasi.
+- Tugas kreativitas.
+- Materi pendalaman.
+
+Guru harus dapat memeriksa semua rekomendasi sebelum diterapkan.
+
+---
+
+# 18. JURNAL MENGAJAR DAN KEHADIRAN
+
+Buat fitur jurnal mengajar berdasarkan jadwal PROSEM.
+
+Data jurnal:
+- Tanggal.
+- Kelas.
+- Mata pelajaran.
+- Pertemuan.
+- Materi.
+- Tujuan pembelajaran.
+- Kegiatan.
+- Jumlah siswa hadir.
+- Siswa tidak hadir.
+- Catatan guru.
+- Status keterlaksanaan.
+
+Jurnal harus dapat terhubung dengan checklist PROSEM.
+
+Ketika guru menyelesaikan jurnal untuk suatu pertemuan, sistem dapat menawarkan pembaruan status PROSEM menjadi selesai. Jangan mengubah status tanpa konfirmasi guru jika ada ketidaksesuaian data.
+
+---
+
+# 19. DESAIN DOKUMEN PROFESIONAL DAN SIAP CETAK
+
+Semua dokumen harus memiliki format yang rapi, resmi, konsisten, dan layak digunakan sebagai administrasi guru.
+
+## 19.1 Standar Dokumen
+
+Gunakan:
+- Ukuran kertas A4.
+- Margin yang sesuai.
+- Font formal dan mudah dibaca.
+- Ukuran huruf proporsional.
+- Judul dokumen jelas.
+- Tabel rapi.
+- Header dan footer.
+- Nomor halaman.
+- Identitas sekolah.
+- Tahun ajaran.
+- Tata letak konsisten.
+
+## 19.2 Halaman Pengesahan dan Tanda Tangan
+
+Setiap dokumen yang memerlukan pengesahan harus menyediakan area tanda tangan.
+
+Contoh format:
+
+Mengetahui,  
+Kepala Sekolah
+
+(ruang tanda tangan)
+
+**Nama Kepala Sekolah**  
+NIP. ....................
+
+<br>
+
+........................, ....................
+
+Guru Mata Pelajaran
+
+(ruang tanda tangan)
+
+**Nama Guru**  
+NIP. ....................
+
+Area tanda tangan harus:
+- Memiliki ruang yang cukup.
+- Tidak terpotong saat dicetak.
+- Memiliki jarak yang proporsional.
+- Menyesuaikan identitas sekolah.
+- Dapat diatur sesuai format sekolah.
+
+Jika tanda tangan digital digunakan, tanda tangan harus berasal dari unggahan atau persetujuan pemilik yang berwenang. Jangan membuat atau menempelkan tanda tangan palsu.
+
+## 19.3 Format Ekspor
+
+Setiap dokumen harus mendukung:
+- PDF.
+- DOCX.
+- XLSX untuk dokumen tabel yang sesuai.
+- Cetak langsung.
+- Pratinjau sebelum diunduh.
+
+Pastikan hasil ekspor bukan sekadar gambar dokumen, tetapi tetap dapat diedit jika formatnya mendukung.
+
+---
+
+# 20. DASHBOARD GURU
+
+Buat dashboard utama yang menampilkan:
+
+- Sapaan dan profil guru.
+- Tahun ajaran aktif.
+- Semester aktif.
+- Jenjang dan kelas.
+- Mata pelajaran.
+- Jumlah perangkat pembelajaran.
+- Progres pembuatan dokumen.
+- Progres pelaksanaan PROSEM.
+- Jumlah bahan ajar.
+- Jumlah modul ajar.
+- Jumlah LKPD.
+- Jumlah PowerPoint.
+- Jumlah bank soal.
+- Jumlah kuis aktif.
+- Ringkasan nilai siswa.
+- Agenda pembelajaran terdekat.
+
+Tambahkan akses cepat:
+- Generate semua perangkat.
+- Buat bahan ajar.
+- Buat PowerPoint.
+- Buat soal.
+- Buat kuis.
+- Buka PROSEM.
+- Buka jurnal mengajar.
+
+---
+
+# 21. STRUKTUR MENU APLIKASI
+
+Buat navigasi yang terorganisasi:
+
+1. Dashboard.
+2. Profil Guru.
+3. Identitas Sekolah.
+4. Pengaturan Kurikulum.
+5. Kalender Pendidikan.
+6. Database Buku.
+7. AI Auto Curriculum.
+8. CP.
+9. TP.
+10. ATP.
+11. PROTA.
+12. PROSEM.
+13. Modul Ajar/RPP.
+14. Bahan Ajar.
+15. LKPD.
+16. PowerPoint.
+17. Bank Soal.
+18. Kisi-Kisi.
+19. Asesmen dan Ujian.
+20. Kuis Online.
+21. Kelas dan Siswa.
+22. Penilaian.
+23. Analisis Hasil Belajar.
+24. Remedial.
+25. Pengayaan.
+26. Jurnal Mengajar.
+27. Laporan.
+28. Arsip Dokumen.
+29. Pengaturan.
+
+---
+
+# 22. DESAIN UI/UX RESPONSIF
+
+Bangun tampilan dengan standar aplikasi SaaS modern.
+
+## 22.1 Tampilan Desktop
+
+- Sidebar navigasi.
+- Header.
+- Dashboard berbasis kartu.
+- Tabel yang mudah dibaca.
+- Form yang terstruktur.
+- Grafik dan statistik.
+- Area kerja dokumen.
+- Panel pratinjau.
+
+## 22.2 Tampilan Mobile
+
+Tampilan mobile harus dirancang secara khusus, bukan sekadar mengecilkan tampilan desktop.
+
+Gunakan:
+- Bottom navigation.
+- Navigasi ringkas.
+- Kartu statistik.
+- Tombol besar dan mudah ditekan.
+- Form bertahap.
+- Tabel responsif.
+- Menu yang dapat dibuka dan ditutup.
+- Tampilan dokumen yang nyaman dibaca.
+- Tombol aksi yang mudah dijangkau ibu jari.
+
+Bottom navigation utama dapat berisi:
+- Beranda.
+- Perangkat.
+- Kelas.
+- Asesmen.
+- Profil.
+
+Menu lainnya dapat ditempatkan pada menu "Lainnya".
+
+## 22.3 Gaya Visual
+
+Gunakan desain:
+- Modern.
+- Minimalis.
+- Elegan.
+- Profesional.
+- Bersih.
+- Konsisten.
+- Tidak terlalu ramai.
+
+Gunakan ikon yang konsisten, warna yang harmonis, tipografi yang nyaman, serta animasi antarmuka yang ringan.
+
+Sediakan dark mode dan light mode jika memungkinkan.
+
+---
+
+# 23. SISTEM AKUN DAN HAK AKSES
+
+Buat sistem autentikasi yang aman.
+
+Minimal sediakan peran:
+
+## Admin
+- Mengelola pengguna.
+- Mengelola konfigurasi.
+- Mengelola data referensi.
+- Mengelola kurikulum.
+- Mengelola sistem.
+- Melihat aktivitas sesuai kewenangan.
+
+## Guru
+- Mengelola profil sendiri.
+- Membuat perangkat pembelajaran.
+- Mengelola kelas yang diampu.
+- Membuat bahan ajar.
+- Membuat asesmen.
+- Mengelola kuis.
+- Melihat nilai dan laporan.
+
+## Siswa
+- Melihat kuis yang diberikan.
+- Mengerjakan kuis.
+- Melihat hasil sesuai pengaturan guru.
+- Mengakses materi yang dibagikan.
+- Melihat tugas yang diberikan.
+
+Terapkan pembatasan akses berdasarkan peran dan kepemilikan data.
+
+---
+
+# 24. PENGATURAN AI
+
+Buat halaman pengaturan AI.
+
+Pengaturan:
+- Provider AI.
+- API key melalui penyimpanan rahasia di server.
+- Model AI.
+- Bahasa keluaran.
+- Gaya bahasa.
+- Panjang materi.
+- Tingkat detail.
+- Gaya penjelasan.
+- Preferensi sumber.
+- Pengaturan generasi gambar.
+- Pengaturan PowerPoint.
+- Pengaturan pembuatan soal.
+
+AI harus mampu menghasilkan bahasa Indonesia yang baik, baku, jelas, dan sesuai tingkat pendidikan peserta didik.
+
+## 24.1 Aturan Kualitas AI
+
+AI wajib:
+1. Memahami konteks jenjang dan kelas.
+2. Mengikuti kurikulum yang dipilih.
+3. Mengutamakan referensi yang tersedia.
+4. Menyusun materi sesuai urutan pembelajaran.
+5. Menghindari pengulangan materi yang tidak perlu.
+6. Menggunakan contoh yang sesuai usia siswa.
+7. Menyesuaikan tingkat kesulitan.
+8. Menghasilkan soal dengan kunci yang benar.
+9. Menyediakan pembahasan.
+10. Memberikan sumber yang dapat diverifikasi.
+11. Menandai data yang belum pasti.
+12. Tidak mengarang sumber atau nomor halaman.
+13. Menghasilkan dokumen yang bisa diedit.
+14. Meminta persetujuan guru sebelum dokumen final digunakan.
+
+---
+
+# 25. SISTEM PENYIMPANAN DAN ARSIP
+
+Semua data harus tersimpan secara terstruktur.
+
+Struktur arsip:
+
+Tahun Ajaran
+- Semester 1
+  - CP
+  - TP
+  - ATP
+  - PROTA
+  - PROSEM
+  - Modul Ajar
+  - Bahan Ajar
+  - LKPD
+  - PowerPoint
+  - Bank Soal
+  - Asesmen
+  - Jurnal
+  - Laporan
+- Semester 2
+  - CP
+  - TP
+  - ATP
+  - PROSEM
+  - Modul Ajar
+  - Bahan Ajar
+  - LKPD
+  - PowerPoint
+  - Bank Soal
+  - Asesmen
+  - Jurnal
+  - Laporan
+
+Sediakan:
+- Pencarian dokumen.
+- Filter tahun ajaran.
+- Filter semester.
+- Filter kelas.
+- Filter mata pelajaran.
+- Riwayat revisi.
+- Duplikasi dokumen.
+- Arsip dokumen lama.
+- Penghapusan dengan konfirmasi.
+
+---
+
+# 26. DATABASE DAN STRUKTUR TEKNIS
+
+Rancang database relasional yang konsisten.
+
+Entitas utama minimal:
+
+- users
+- roles
+- schools
+- teacher_profiles
+- student_profiles
+- classes
+- subjects
+- curricula
+- academic_years
+- semesters
+- school_calendars
+- textbooks
+- textbook_contents
+- curriculum_elements
+- learning_outcomes
+- learning_objectives
+- learning_sequences
+- annual_programs
+- semester_programs
+- semester_schedule_items
+- teaching_modules
+- teaching_materials
+- worksheets
+- presentations
+- question_banks
+- questions
+- question_options
+- assessments
+- quizzes
+- quiz_sessions
+- student_answers
+- grades
+- rubrics
+- attendance
+- teaching_journals
+- remedial_programs
+- enrichment_programs
+- generated_documents
+- document_versions
+- ai_generation_jobs
+- audit_logs
+
+Terapkan:
+- Relasi antarentitas.
+- Foreign key.
+- Validasi data.
+- Indeks pencarian.
+- Pembatasan akses.
+- Backup.
+- Pengelolaan file.
+- Riwayat perubahan.
+
+Jangan menyimpan semua data dalam satu tabel besar.
+
+---
+
+# 27. TEKNOLOGI DAN ARSITEKTUR
+
+Pilih teknologi modern yang stabil dan mudah dikembangkan.
+
+Rekomendasi:
+- Frontend: React atau Next.js.
+- Bahasa: TypeScript.
+- Styling: Tailwind CSS.
+- Komponen: UI component library yang konsisten.
+- Backend: API server atau backend terintegrasi.
+- Database: PostgreSQL.
+- Authentication: sistem autentikasi yang aman.
+- Penyimpanan file: object storage.
+- AI: integrasi API model AI.
+- Ekspor dokumen: library yang sesuai untuk PDF, DOCX, XLSX, dan PPTX.
+
+Gunakan arsitektur modular.
+
+Pisahkan:
+- Frontend.
+- Backend.
+- Database.
+- AI services.
+- File processing.
+- Document generation.
+- Authentication.
+- Assessment engine.
+
+Jangan menaruh API key di frontend.
+
+Gunakan environment variables dan server-side API.
+
+## 27.1 Proses AI yang Panjang
+
+Pembuatan seluruh perangkat satu tahun dapat memerlukan waktu.
+
+Gunakan:
+- Background jobs.
+- Progress tracking.
+- Status proses.
+- Retry jika gagal.
+- Penyimpanan hasil bertahap.
+- Notifikasi ketika selesai.
+
+Jangan membuat pengguna harus menunggu satu halaman terbuka sampai seluruh proses selesai.
+
+---
+
+# 28. KEAMANAN DAN PRIVASI
+
+Terapkan:
+- Password hashing.
+- Role-based access control.
+- Validasi input.
+- Proteksi terhadap akses ilegal.
+- Rate limiting.
+- Proteksi API.
+- Validasi file upload.
+- Pembatasan ukuran file.
+- Pengamanan API key.
+- Audit log.
+- Backup database.
+- Pengelolaan sesi.
+- Perlindungan data siswa.
+
+Jangan menampilkan data pribadi siswa kepada pengguna yang tidak berwenang.
+
+---
+
+# 29. PENGUJIAN DAN VALIDASI
+
+Sebelum aplikasi dinyatakan selesai, lakukan pengujian:
+
+### Pengujian Fitur
+- Registrasi dan login.
+- Pengaturan identitas sekolah.
+- Pengaturan kurikulum.
+- Upload buku.
+- Pembacaan isi buku.
+- Generate CP.
+- Generate TP.
+- Generate ATP.
+- Generate PROTA.
+- Generate PROSEM.
+- Checklist bulanan.
+- Generate bahan ajar per pertemuan.
+- Generate modul ajar.
+- Generate LKPD.
+- Generate PowerPoint.
+- Generate soal.
+- Kuis online.
+- Penilaian otomatis.
+- Ekspor dokumen.
+- Pengelolaan kelas.
+- Pengelolaan siswa.
+
+### Pengujian Tampilan
+- Desktop.
+- Tablet.
+- Android.
+- iPhone.
+- Browser modern.
+
+### Pengujian Dokumen
+- Tidak ada tabel terpotong.
+- Tidak ada teks bertumpuk.
+- Tidak ada halaman kosong yang tidak diperlukan.
+- Area tanda tangan tersedia.
+- Nomor halaman benar.
+- Dokumen siap dicetak.
+
+### Pengujian AI
+- Materi sesuai kelas.
+- Tujuan pembelajaran terukur.
+- Soal sesuai materi.
+- Kunci jawaban benar.
+- Referensi dapat dilacak.
+- Tidak ada informasi sumber yang dibuat-buat.
+
+---
+
+# 30. ALUR PENGGUNAAN APLIKASI
+
+Buat alur penggunaan sesederhana mungkin.
+
+### Tahap 1: Pengaturan Awal
+Guru memasukkan:
+- Identitas sekolah.
+- Identitas guru.
+- Jenjang.
+- Kurikulum.
+- Kelas.
+- Fase.
+- Mata pelajaran.
+- Tahun ajaran.
+
+### Tahap 2: Referensi Buku
+Guru:
+- Mengunggah buku.
+- Memilih buku referensi.
+- Menentukan buku utama.
+
+### Tahap 3: Generate Kurikulum
+Guru menekan tombol:
+**GENERATE KURIKULUM OTOMATIS**
+
+AI menghasilkan elemen kurikulum, CP, materi pokok, TP, dan ATP.
+
+### Tahap 4: Generate Program
+Guru menekan:
+**GENERATE PROTA DAN PROSEM**
+
+AI menyusun rencana pembelajaran satu tahun berdasarkan kalender dan alokasi waktu.
+
+### Tahap 5: Generate Seluruh Perangkat
+Guru menekan:
+**GENERATE SEMUA PERANGKAT**
+
+AI membuat:
+- Modul ajar.
+- Bahan ajar per pertemuan.
+- LKPD.
+- PowerPoint.
+- Bank soal.
+- Asesmen.
+- Dokumen pendukung.
+
+### Tahap 6: Pelaksanaan Pembelajaran
+Guru menggunakan:
+- Bahan ajar.
+- PowerPoint.
+- LKPD.
+- Jurnal mengajar.
+- Checklist PROSEM.
+
+### Tahap 7: Asesmen
+Guru membuat kuis atau ujian online dan membagikan tautan atau kode kepada siswa.
+
+### Tahap 8: Evaluasi
+Sistem mengoreksi, mengolah nilai, dan membuat analisis hasil belajar.
+
+### Tahap 9: Ekspor
+Guru mengunduh seluruh dokumen dan laporan sesuai kebutuhan.
+
+---
+
+# 31. STANDAR HASIL AKHIR APLIKASI
+
+Aplikasi tidak boleh hanya menjadi prototipe tampilan.
+
+Semua tombol, menu, form, tabel, proses AI, penyimpanan, dan ekspor harus benar-benar berfungsi.
+
+Hasil akhir harus berupa aplikasi yang:
+
+1. Dapat digunakan secara nyata.
+2. Memiliki database.
+3. Memiliki autentikasi.
+4. Memiliki hak akses.
+5. Memiliki integrasi AI.
+6. Memiliki pengelolaan buku.
+7. Dapat menghasilkan dokumen.
+8. Dapat membuat PowerPoint.
+9. Dapat membuat kuis online.
+10. Dapat mengelola nilai.
+11. Dapat digunakan melalui HP.
+12. Dapat dikembangkan lebih lanjut.
+
+Jangan membuat tombol palsu atau fitur yang hanya berupa tampilan tanpa fungsi.
+
+Jika suatu integrasi belum tersedia, tampilkan status belum dikonfigurasi dan sediakan cara pengaturannya. Jangan mengklaim fitur telah aktif jika belum benar-benar berjalan.
+
+---
+
+# 32. PRIORITAS PENGEMBANGAN
+
+Bangun aplikasi secara bertahap agar kualitas tetap terjaga.
+
+**FASE 1 – FONDASI**
+- Autentikasi.
+- Profil guru.
+- Identitas sekolah.
+- Database.
+- Pengaturan kurikulum.
+- Dashboard.
+- Responsive UI.
+
+**FASE 2 – AI KURIKULUM**
+- Database buku.
+- Upload referensi.
+- AI Auto Curriculum.
+- CP.
+- TP.
+- ATP.
+- PROTA.
+- PROSEM.
+
+**FASE 3 – PERANGKAT PEMBELAJARAN**
+- Modul ajar.
+- Bahan ajar per pertemuan.
+- LKPD.
+- PowerPoint.
+- Ekspor dokumen.
+
+**FASE 4 – ASESMEN**
+- Bank soal.
+- Kisi-kisi.
+- Asesmen.
+- Ujian.
+- Kuis online.
+- Koreksi otomatis.
+
+**FASE 5 – MANAJEMEN PEMBELAJARAN**
+- Kelas.
+- Siswa.
+- Nilai.
+- Jurnal.
+- Remedial.
+- Pengayaan.
+- Analisis hasil belajar.
+
+**FASE 6 – PENYEMPURNAAN**
+- Pengujian.
+- Keamanan.
+- Optimalisasi mobile.
+- Penyempurnaan desain.
+- Backup.
+- Dokumentasi.
+
+---
+
+# 33. INSTRUKSI KHUSUS KEPADA AI DEVELOPER
+
+Bangun aplikasi ini dengan pendekatan produk nyata, bukan sekadar demonstrasi.
+
+Sebelum coding:
+1. Susun arsitektur sistem.
+2. Susun struktur database.
+3. Susun struktur halaman.
+4. Tentukan alur pengguna.
+5. Tentukan integrasi AI.
+6. Tentukan sistem penyimpanan file.
+7. Tentukan sistem ekspor dokumen.
+
+Setelah itu, implementasikan secara bertahap.
+
+Utamakan pengalaman guru: **guru cukup mengisi informasi dasar, memilih mata pelajaran dan sumber referensi, kemudian AI mengerjakan sebagian besar proses penyusunan perangkat pembelajaran secara otomatis.**
+
+Namun, guru tetap memiliki kendali penuh untuk:
+- Memeriksa hasil.
+- Mengubah isi.
+- Mengatur alokasi waktu.
+- Mengedit materi.
+- Mengubah soal.
+- Menyetujui dokumen.
+- Mengunduh dan mencetak hasil.
+
+Semua dokumen harus mengikuti kurikulum dan sumber referensi yang dipilih. Informasi yang belum dapat diverifikasi harus ditandai sebagai draf, bukan dianggap sebagai ketentuan resmi.
+
+**TARGET AKHIR:**
+
+Hasilkan sebuah platform bernama **AI SMART TEACHER – ALL IN ONE EDUCATION PLATFORM**, yaitu aplikasi yang mampu membantu guru merencanakan pembelajaran satu tahun, menghasilkan seluruh perangkat pembelajaran, mengajar dengan media digital, melaksanakan asesmen online, mengelola hasil belajar, dan menghasilkan administrasi pendidikan secara profesional dalam satu sistem terpadu.
+
+Mulailah dari fondasi aplikasi yang benar, kemudian implementasikan seluruh fitur berdasarkan prioritas pengembangan di atas. Pastikan setiap fase selesai dan dapat diuji sebelum melanjutkan ke fase berikutnya.

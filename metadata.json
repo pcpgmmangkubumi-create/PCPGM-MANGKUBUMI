@@ -1,0 +1,6 @@
+{
+  "name": "AI SMART TEACHER",
+  "description": "Platform otomatisasi perangkat pembelajaran, bahan ajar, PowerPoint edukatif, bank soal, dan asesmen digital terintegrasi untuk guru Indonesia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,443 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "Profil pengguna dan peran (Admin, Guru, Siswa).",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "email": { "type": "string", "format": "email", "maxLength": 200 },
+        "displayName": { "type": "string", "minLength": 1, "maxLength": 150 },
+        "role": { "type": "string", "enum": ["admin", "teacher", "student"] },
+        "nip": { "type": "string", "maxLength": 40 },
+        "jabatan": { "type": "string", "maxLength": 100 },
+        "subject": { "type": "string", "maxLength": 120 },
+        "classesTaught": { "type": "string", "maxLength": 200 },
+        "phase": { "type": "string", "maxLength": 40 },
+        "level": { "type": "string", "maxLength": 40 },
+        "schoolName": { "type": "string", "maxLength": 200 },
+        "signatureDataUrl": { "type": "string", "maxLength": 250000 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email", "displayName", "role", "createdAt", "updatedAt"]
+    },
+    "School": {
+      "title": "School",
+      "description": "Identitas sekolah dan konfigurasi tahun ajaran guru.",
+      "type": "object",
+      "properties": {
+        "ownerId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "name": { "type": "string", "minLength": 1, "maxLength": 200 },
+        "npsn": { "type": "string", "maxLength": 30 },
+        "level": { "type": "string", "maxLength": 40 },
+        "status": { "type": "string", "maxLength": 40 },
+        "address": { "type": "string", "maxLength": 300 },
+        "village": { "type": "string", "maxLength": 100 },
+        "district": { "type": "string", "maxLength": 100 },
+        "regency": { "type": "string", "maxLength": 100 },
+        "province": { "type": "string", "maxLength": 100 },
+        "principalName": { "type": "string", "maxLength": 150 },
+        "principalNip": { "type": "string", "maxLength": 40 },
+        "teacherName": { "type": "string", "maxLength": 150 },
+        "teacherNip": { "type": "string", "maxLength": 40 },
+        "subject": { "type": "string", "maxLength": 120 },
+        "academicYear": { "type": "string", "maxLength": 30 },
+        "semester": { "type": "string", "maxLength": 20 },
+        "logoDataUrl": { "type": "string", "maxLength": 250000 },
+        "agencyLogoDataUrl": { "type": "string", "maxLength": 250000 },
+        "letterheadDataUrl": { "type": "string", "maxLength": 250000 },
+        "titiMangsa": { "type": "string", "maxLength": 120 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["ownerId", "name", "level", "academicYear", "semester", "createdAt", "updatedAt"]
+    },
+    "CurriculumConfig": {
+      "title": "CurriculumConfig",
+      "description": "Konfigurasi kurikulum yang tersedia.",
+      "type": "object",
+      "properties": {
+        "ownerId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "name": { "type": "string", "minLength": 1, "maxLength": 150 },
+        "code": { "type": "string", "minLength": 1, "maxLength": 40 },
+        "description": { "type": "string", "maxLength": 500 },
+        "structureComponents": { "type": "array" },
+        "isActive": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["ownerId", "name", "code", "isActive", "createdAt", "updatedAt"]
+    },
+    "AcademicCalendar": {
+      "title": "AcademicCalendar",
+      "description": "Kalender pendidikan dan analisis minggu efektif.",
+      "type": "object",
+      "properties": {
+        "ownerId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "academicYear": { "type": "string", "maxLength": 30 },
+        "semester": { "type": "string", "maxLength": 20 },
+        "totalWeeks": { "type": "number" },
+        "effectiveWeeks": { "type": "number" },
+        "nonEffectiveWeeks": { "type": "number" },
+        "holidays": { "type": "array" },
+        "monthlySchedule": { "type": "array" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["ownerId", "academicYear", "semester", "totalWeeks", "effectiveWeeks", "createdAt", "updatedAt"]
+    },
+    "Textbook": {
+      "title": "Textbook",
+      "description": "Buku referensi dan hasil ekstraksi bab/subbab.",
+      "type": "object",
+      "properties": {
+        "ownerId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "title": { "type": "string", "minLength": 1, "maxLength": 200 },
+        "author": { "type": "string", "maxLength": 150 },
+        "publisher": { "type": "string", "maxLength": 150 },
+        "publishYear": { "type": "string", "maxLength": 10 },
+        "curriculum": { "type": "string", "maxLength": 100 },
+        "level": { "type": "string", "maxLength": 40 },
+        "grade": { "type": "string", "maxLength": 30 },
+        "subject": { "type": "string", "maxLength": 120 },
+        "isbn": { "type": "string", "maxLength": 40 },
+        "pageCount": { "type": "number" },
+        "referenceType": { "type": "string", "enum": ["primary", "companion", "module", "government", "custom"] },
+        "sourceUrl": { "type": "string", "maxLength": 1000 },
+        "fileName": { "type": "string", "maxLength": 200 },
+        "extractedSummary": { "type": "string", "maxLength": 10000 },
+        "chapters": { "type": "array" },
+        "status": { "type": "string", "enum": ["ready", "processing", "needs_review"] },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["ownerId", "title", "subject", "referenceType", "status", "createdAt", "updatedAt"]
+    },
+    "Workspace": {
+      "title": "Workspace",
+      "description": "Paket kerja satu tahun ajaran per mata pelajaran dan kelas.",
+      "type": "object",
+      "properties": {
+        "ownerId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "academicYear": { "type": "string", "maxLength": 30 },
+        "semester": { "type": "string", "maxLength": 20 },
+        "level": { "type": "string", "maxLength": 40 },
+        "grade": { "type": "string", "maxLength": 30 },
+        "phase": { "type": "string", "maxLength": 30 },
+        "subject": { "type": "string", "maxLength": 120 },
+        "curriculum": { "type": "string", "maxLength": 100 },
+        "jpPerWeek": { "type": "number" },
+        "primaryBookId": { "type": "string", "maxLength": 128 },
+        "curriculumData": { "type": "object" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["ownerId", "academicYear", "semester", "level", "grade", "subject", "curriculum", "createdAt", "updatedAt"]
+    },
+    "LearningDocument": {
+      "title": "LearningDocument",
+      "description": "Dokumen perangkat pembelajaran (CP, TP, ATP, PROTA, Modul Ajar, Bahan Ajar, LKPD, PPT, Kisi-kisi, Remedial, Pengayaan, Laporan).",
+      "type": "object",
+      "properties": {
+        "ownerId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "workspaceId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "academicYear": { "type": "string", "maxLength": 30 },
+        "semester": { "type": "string", "maxLength": 20 },
+        "grade": { "type": "string", "maxLength": 30 },
+        "subject": { "type": "string", "maxLength": 120 },
+        "docType": { "type": "string", "maxLength": 40 },
+        "title": { "type": "string", "minLength": 1, "maxLength": 250 },
+        "meetingNumber": { "type": "number" },
+        "chapterTitle": { "type": "string", "maxLength": 200 },
+        "status": { "type": "string", "enum": ["draft", "approved", "needs_revision"] },
+        "isAiDraft": { "type": "boolean" },
+        "sourceRef": { "type": "string", "maxLength": 500 },
+        "content": { "type": "object" },
+        "version": { "type": "number" },
+        "archived": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["ownerId", "workspaceId", "docType", "title", "status", "version", "createdAt", "updatedAt"]
+    },
+    "ProsemItem": {
+      "title": "ProsemItem",
+      "description": "Item jadwal PROSEM dan checklist keterlaksanaan bulanan.",
+      "type": "object",
+      "properties": {
+        "ownerId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "workspaceId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "semester": { "type": "string", "maxLength": 20 },
+        "month": { "type": "string", "maxLength": 30 },
+        "weekNumber": { "type": "number" },
+        "meetingNumber": { "type": "number" },
+        "tpCode": { "type": "string", "maxLength": 50 },
+        "topic": { "type": "string", "maxLength": 250 },
+        "subtopic": { "type": "string", "maxLength": 250 },
+        "jpAllocation": { "type": "number" },
+        "plannedDate": { "type": "string", "maxLength": 40 },
+        "executionStatus": { "type": "string", "enum": ["belum", "berlangsung", "selesai", "ditunda", "penyesuaian"] },
+        "executionDate": { "type": "string", "maxLength": 40 },
+        "teacherNotes": { "type": "string", "maxLength": 1000 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["ownerId", "workspaceId", "semester", "month", "meetingNumber", "topic", "jpAllocation", "executionStatus", "createdAt", "updatedAt"]
+    },
+    "Classroom": {
+      "title": "Classroom",
+      "description": "Data kelas yang diampu guru.",
+      "type": "object",
+      "properties": {
+        "ownerId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "name": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "level": { "type": "string", "maxLength": 40 },
+        "grade": { "type": "string", "maxLength": 30 },
+        "phase": { "type": "string", "maxLength": 30 },
+        "academicYear": { "type": "string", "maxLength": 30 },
+        "homeroomTeacher": { "type": "string", "maxLength": 150 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["ownerId", "name", "level", "grade", "academicYear", "createdAt", "updatedAt"]
+    },
+    "Student": {
+      "title": "Student",
+      "description": "Data peserta didik pada kelas (dilindungi privasi).",
+      "type": "object",
+      "properties": {
+        "ownerId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "classId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "fullName": { "type": "string", "minLength": 1, "maxLength": 150 },
+        "nis": { "type": "string", "maxLength": 30 },
+        "nisn": { "type": "string", "maxLength": 30 },
+        "gender": { "type": "string", "enum": ["L", "P", "-"] },
+        "status": { "type": "string", "enum": ["active", "inactive"] },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["ownerId", "classId", "fullName", "status", "createdAt", "updatedAt"]
+    },
+    "QuestionItem": {
+      "title": "QuestionItem",
+      "description": "Butir soal pada Bank Soal.",
+      "type": "object",
+      "properties": {
+        "ownerId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "workspaceId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "subject": { "type": "string", "maxLength": 120 },
+        "grade": { "type": "string", "maxLength": 30 },
+        "tpCode": { "type": "string", "maxLength": 50 },
+        "topic": { "type": "string", "maxLength": 200 },
+        "questionType": { "type": "string", "maxLength": 50 },
+        "cognitiveLevel": { "type": "string", "maxLength": 10 },
+        "hotsTier": { "type": "string", "enum": ["LOTS", "MOTS", "HOTS"] },
+        "difficulty": { "type": "string", "enum": ["mudah", "sedang", "sulit"] },
+        "category": { "type": "string", "maxLength": 60 },
+        "stem": { "type": "string", "minLength": 1, "maxLength": 4000 },
+        "options": { "type": "array" },
+        "correctAnswer": { "type": "string", "maxLength": 1000 },
+        "explanation": { "type": "string", "maxLength": 3000 },
+        "indicator": { "type": "string", "maxLength": 500 },
+        "rubric": { "type": "string", "maxLength": 2000 },
+        "points": { "type": "number" },
+        "sourceRef": { "type": "string", "maxLength": 300 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["ownerId", "workspaceId", "questionType", "cognitiveLevel", "difficulty", "stem", "points", "createdAt", "updatedAt"]
+    },
+    "Quiz": {
+      "title": "Quiz",
+      "description": "Kuis online dan ujian digital (tanpa kunci jawaban plaintext).",
+      "type": "object",
+      "properties": {
+        "ownerId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "workspaceId": { "type": "string", "maxLength": 128 },
+        "classId": { "type": "string", "maxLength": 128 },
+        "title": { "type": "string", "minLength": 1, "maxLength": 200 },
+        "description": { "type": "string", "maxLength": 1000 },
+        "subject": { "type": "string", "maxLength": 120 },
+        "grade": { "type": "string", "maxLength": 30 },
+        "accessCode": { "type": "string", "minLength": 4, "maxLength": 20, "pattern": "^[A-Z0-9\\-]+$" },
+        "mode": { "type": "string", "enum": ["latihan", "ujian"] },
+        "durationMinutes": { "type": "number" },
+        "startDate": { "type": "string", "maxLength": 40 },
+        "endDate": { "type": "string", "maxLength": 40 },
+        "maxAttempts": { "type": "number" },
+        "shuffleQuestions": { "type": "boolean" },
+        "shuffleOptions": { "type": "boolean" },
+        "passingScore": { "type": "number" },
+        "showResultsToStudent": { "type": "boolean" },
+        "requireStudentIdentity": { "type": "boolean" },
+        "status": { "type": "string", "enum": ["draft", "published", "closed"] },
+        "publicQuestions": { "type": "array" },
+        "sealedKey": { "type": "string", "maxLength": 50000 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["ownerId", "title", "accessCode", "mode", "durationMinutes", "status", "publicQuestions", "createdAt", "updatedAt"]
+    },
+    "QuizSubmission": {
+      "title": "QuizSubmission",
+      "description": "Hasil pengerjaan kuis siswa.",
+      "type": "object",
+      "properties": {
+        "quizId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "quizOwnerId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "studentUid": { "type": "string", "maxLength": 128 },
+        "studentName": { "type": "string", "minLength": 1, "maxLength": 150 },
+        "studentNis": { "type": "string", "maxLength": 40 },
+        "className": { "type": "string", "maxLength": 60 },
+        "answers": { "type": "object" },
+        "autoScore": { "type": "number" },
+        "finalScore": { "type": "number" },
+        "maxScore": { "type": "number" },
+        "percentage": { "type": "number" },
+        "passed": { "type": "boolean" },
+        "gradingStatus": { "type": "string", "enum": ["auto_graded", "teacher_reviewed"] },
+        "itemFeedback": { "type": "array" },
+        "startedAt": { "type": "string", "format": "date-time" },
+        "submittedAt": { "type": "string", "format": "date-time" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["quizId", "quizOwnerId", "studentName", "finalScore", "maxScore", "percentage", "gradingStatus", "submittedAt"]
+    },
+    "GradeEntry": {
+      "title": "GradeEntry",
+      "description": "Nilai pembelajaran siswa di pusat penilaian.",
+      "type": "object",
+      "properties": {
+        "ownerId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "workspaceId": { "type": "string", "maxLength": 128 },
+        "classId": { "type": "string", "maxLength": 128 },
+        "studentId": { "type": "string", "maxLength": 128 },
+        "studentName": { "type": "string", "maxLength": 150 },
+        "category": { "type": "string", "maxLength": 40 },
+        "title": { "type": "string", "maxLength": 150 },
+        "score": { "type": "number" },
+        "maxScore": { "type": "number" },
+        "weight": { "type": "number" },
+        "kkm": { "type": "number" },
+        "notes": { "type": "string", "maxLength": 500 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["ownerId", "classId", "studentId", "studentName", "category", "score", "maxScore", "createdAt", "updatedAt"]
+    },
+    "TeachingJournal": {
+      "title": "TeachingJournal",
+      "description": "Jurnal mengajar dan kehadiran siswa per pertemuan.",
+      "type": "object",
+      "properties": {
+        "ownerId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "workspaceId": { "type": "string", "maxLength": 128 },
+        "classId": { "type": "string", "maxLength": 128 },
+        "className": { "type": "string", "maxLength": 80 },
+        "subject": { "type": "string", "maxLength": 120 },
+        "date": { "type": "string", "maxLength": 40 },
+        "meetingNumber": { "type": "number" },
+        "prosemItemId": { "type": "string", "maxLength": 128 },
+        "topic": { "type": "string", "maxLength": 250 },
+        "tpCode": { "type": "string", "maxLength": 60 },
+        "activities": { "type": "string", "maxLength": 3000 },
+        "presentCount": { "type": "number" },
+        "absentCount": { "type": "number" },
+        "absentStudents": { "type": "string", "maxLength": 1000 },
+        "teacherNotes": { "type": "string", "maxLength": 2000 },
+        "executionStatus": { "type": "string", "enum": ["selesai", "berlangsung", "ditunda", "penyesuaian"] },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["ownerId", "className", "subject", "date", "meetingNumber", "topic", "presentCount", "absentCount", "executionStatus", "createdAt", "updatedAt"]
+    },
+    "AiSetting": {
+      "title": "AiSetting",
+      "description": "Preferensi AI guru (tanpa menyimpan API key di klien).",
+      "type": "object",
+      "properties": {
+        "ownerId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "model": { "type": "string", "maxLength": 80 },
+        "language": { "type": "string", "maxLength": 80 },
+        "tone": { "type": "string", "maxLength": 150 },
+        "materialLength": { "type": "string", "maxLength": 40 },
+        "detailLevel": { "type": "string", "maxLength": 40 },
+        "explanationStyle": { "type": "string", "maxLength": 80 },
+        "sourcePreference": { "type": "string", "maxLength": 80 },
+        "imageStyle": { "type": "string", "maxLength": 80 },
+        "pptTheme": { "type": "string", "maxLength": 60 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["ownerId", "model", "language", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/User" },
+      "description": "Profil pengguna dan peran."
+    },
+    "/schools/{schoolId}": {
+      "schema": { "$ref": "#/entities/School" },
+      "description": "Data identitas sekolah milik guru."
+    },
+    "/curricula/{curriculumId}": {
+      "schema": { "$ref": "#/entities/CurriculumConfig" },
+      "description": "Pengaturan kurikulum."
+    },
+    "/calendars/{calendarId}": {
+      "schema": { "$ref": "#/entities/AcademicCalendar" },
+      "description": "Kalender pendidikan dan minggu efektif."
+    },
+    "/textbooks/{bookId}": {
+      "schema": { "$ref": "#/entities/Textbook" },
+      "description": "Database buku referensi dan hasil ekstraksi."
+    },
+    "/workspaces/{workspaceId}": {
+      "schema": { "$ref": "#/entities/Workspace" },
+      "description": "Ruang kerja perangkat pembelajaran per tahun ajaran."
+    },
+    "/documents/{docId}": {
+      "schema": { "$ref": "#/entities/LearningDocument" },
+      "description": "Perangkat pembelajaran terintegrasi (CP, TP, ATP, PROTA, Modul Ajar, Bahan Ajar, LKPD, PowerPoint, dll)."
+    },
+    "/prosem_items/{itemId}": {
+      "schema": { "$ref": "#/entities/ProsemItem" },
+      "description": "Jadwal PROSEM dan checklist keterlaksanaan bulanan."
+    },
+    "/classes/{classId}": {
+      "schema": { "$ref": "#/entities/Classroom" },
+      "description": "Manajemen kelas."
+    },
+    "/students/{studentId}": {
+      "schema": { "$ref": "#/entities/Student" },
+      "description": "Data peserta didik (PII terlindungi)."
+    },
+    "/questions/{questionId}": {
+      "schema": { "$ref": "#/entities/QuestionItem" },
+      "description": "Bank soal terintegrasi."
+    },
+    "/quizzes/{quizId}": {
+      "schema": { "$ref": "#/entities/Quiz" },
+      "description": "Kuis online dan ujian digital."
+    },
+    "/quiz_submissions/{submissionId}": {
+      "schema": { "$ref": "#/entities/QuizSubmission" },
+      "description": "Hasil pengerjaan kuis siswa."
+    },
+    "/grades/{gradeId}": {
+      "schema": { "$ref": "#/entities/GradeEntry" },
+      "description": "Rekap nilai siswa."
+    },
+    "/journals/{journalId}": {
+      "schema": { "$ref": "#/entities/TeachingJournal" },
+      "description": "Jurnal mengajar dan kehadiran."
+    },
+    "/ai_settings/{userId}": {
+      "schema": { "$ref": "#/entities/AiSetting" },
+      "description": "Preferensi AI guru."
+    }
+  }
+}
